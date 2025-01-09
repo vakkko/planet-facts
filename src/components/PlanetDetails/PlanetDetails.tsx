@@ -53,18 +53,27 @@ export default function PlanetDetails() {
             <img src="/assets/icon-source.svg" alt="source" />
           </div>
           <div className="info-list">
-            <NavLink className={"info"} to={`/${planetName}/overview`}>
+            <NavLink
+              className={`info ${planetName}`}
+              to={`/${planetName}/overview`}
+            >
               <button>
                 <span className="list-number">01</span> <span>OVERVIEW</span>
               </button>
             </NavLink>
-            <NavLink className={"info"} to={`/${planetName}/internal`}>
+            <NavLink
+              className={`info ${planetName}`}
+              to={`/${planetName}/internal`}
+            >
               <button>
                 <span className="list-number">02</span>
                 <span>INTERNAL STRUCTURE</span>
               </button>
             </NavLink>
-            <NavLink className={"info"} to={`/${planetName}/geology`}>
+            <NavLink
+              className={`info ${planetName}`}
+              to={`/${planetName}/geology`}
+            >
               <button>
                 <span className="list-number">03</span>
                 <span>SURFACE GEOLOGY</span>
