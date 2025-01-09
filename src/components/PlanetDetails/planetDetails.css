@@ -80,34 +80,34 @@
   cursor: pointer;
 }
 
-.mercury.active {
+.info.mercury.active {
   background-color: #419ebb;
 }
 
-.venus.active {
+.info.venus.active {
   background-color: #eda249;
 }
 
-.earth.active {
+.info.earth.active {
   background-color: #6d2ed5;
 }
 
-.mars.active {
+.info.mars.active {
   background-color: #d14c32;
 }
 
-.jupiter.active {
+.info.jupiter.active {
   background-color: #d83a34;
 }
 
-.saturn.active {
+.info.saturn.active {
   background-color: #cd5120;
 }
 
-.uranus.active {
+.info.uranus.active {
   background-color: #1ec1a2;
 }
 
-.neptune.active {
+.info.neptune.active {
   background-color: #2d68f0;
 }

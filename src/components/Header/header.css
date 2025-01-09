@@ -7,13 +7,14 @@
   padding-top: 1.3rem;
 }
 
-.planet-link {
+.link {
   font-size: 1.1rem;
   font-weight: 700;
   line-height: 2.5rem;
   letter-spacing: 0.1rem;
-  color: white;
+  color: #838391;
   padding-top: 2rem;
+  cursor: pointer;
 }
 
 .planets-navigation {
@@ -33,7 +34,46 @@ header {
 
 /* ACTIVE */
 
-.planet-link.active {
+.link:hover {
+  color: white;
+}
+
+.link-mercury {
   box-shadow: 0 -4px 0 0 #419ebb;
-  cursor: pointer;
+  color: white;
+}
+
+.link-venus {
+  box-shadow: 0 -4px 0 0 #eda249;
+  color: white;
+}
+
+.link-earth {
+  box-shadow: 0 -4px 0 0 #6d2ed5;
+  color: white;
+}
+
+.link-mars {
+  box-shadow: 0 -4px 0 0 #d14c32;
+  color: white;
+}
+
+.link-jupiter {
+  box-shadow: 0 -4px 0 0 #d83a34;
+  color: white;
+}
+
+.link-saturn {
+  box-shadow: 0 -4px 0 0 #cd5120;
+  color: white;
+}
+
+.link-uranus {
+  box-shadow: 0 -4px 0 0 #1ec1a2;
+  color: white;
+}
+
+.link-neptune {
+  box-shadow: 0 -4px 0 0 #2d68f0;
+  color: white;
 }
