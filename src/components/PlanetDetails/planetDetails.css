@@ -75,7 +75,11 @@
 
 /* ACTIVE */
 
-.info-list > button:hover {
-  background-color: #d8d8d8;
+.info:hover {
+  background-color: #38384f;
   cursor: pointer;
+}
+
+.info.active {
+  background-color: #419ebb;
 }

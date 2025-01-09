@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router";
+import { NavLink, Outlet } from "react-router";
 import "./header.css";
 
 const linkStyle = {
@@ -16,51 +16,63 @@ export default function Header() {
       <header>
         <p className="logo">THE PLANETS</p>
         <nav className="planets-navigation">
-          <Link
+          <NavLink
+            to={"/mercury/overview"}
             className="planet-link"
             style={linkStyle}
-            to={"mercury/overview"}
           >
             {" "}
             MERCURY
-          </Link>
-          <Link className="planet-link" style={linkStyle} to={"venus/overview"}>
+          </NavLink>
+          <NavLink
+            className="planet-link"
+            style={linkStyle}
+            to={"venus/overview"}
+          >
             VENUS
-          </Link>
-          <Link className="planet-link" style={linkStyle} to={"earth/overview"}>
+          </NavLink>
+          <NavLink
+            className="planet-link"
+            style={linkStyle}
+            to={"earth/overview"}
+          >
             EARTH
-          </Link>
-          <Link className="planet-link" style={linkStyle} to={"mars/overview"}>
+          </NavLink>
+          <NavLink
+            className="planet-link"
+            style={linkStyle}
+            to={"mars/overview"}
+          >
             MARS
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             className="planet-link"
             style={linkStyle}
             to={"saturn/overview"}
           >
             SATURN
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             className="planet-link"
             style={linkStyle}
             to={"jupiter/overview"}
           >
             JUPITER
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             className="planet-link"
             style={linkStyle}
             to={"uranus/overview"}
           >
             URANUS
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             className="planet-link"
             style={linkStyle}
             to={"neptune/overview"}
           >
             NEPTUNE
-          </Link>
+          </NavLink>
         </nav>
       </header>
       <Outlet />

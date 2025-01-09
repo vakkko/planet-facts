@@ -4,7 +4,7 @@
   font-weight: 400;
   line-height: 3.623rem;
   letter-spacing: -1.0499999523162842px;
-  padding-top: 0.5rem;
+  padding-top: 1.3rem;
 }
 
 .planets-navigation {
@@ -24,7 +24,7 @@ header {
 
 /* ACTIVE */
 
-.planet-link:hover {
+.planet-link.active {
   box-shadow: 0 -4px 0 0 #419ebb;
   cursor: pointer;
 }
