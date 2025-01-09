@@ -29,9 +29,3 @@ export interface PlanetStatsProps {
   revolution: string;
   temperature: string;
 }
-
-export type PlanetInfo = {
-  content?: string;
-  source?: string;
-  image?: string;
-};

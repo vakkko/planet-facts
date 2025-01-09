@@ -1,7 +1,8 @@
 import "./planetDetails.css";
 import PlanetStats from "./PlanetStats/PlanetStats";
-import { PlanetData, PlanetInfo } from "../../App.modal";
+import { PlanetData } from "../../App.modal";
 import { useLoaderData, useParams, NavLink } from "react-router";
+import { getPlanetInfo } from "../../utils";
 
 export default function PlanetDetails() {
   const planetData = useLoaderData() as PlanetData[];
@@ -11,33 +12,12 @@ export default function PlanetDetails() {
   });
   const info = params.info;
   const planetName = planet?.name.toLowerCase();
-  let planetInfos: PlanetInfo = {};
-  (function content() {
-    if (info === "overview") {
-      return (planetInfos = {
-        content: planet?.overview.content,
-        source: planet?.overview.source,
-        image: planet?.images.planet,
-      });
-    } else if (info === "internal") {
-      return (planetInfos = {
-        content: planet?.structure.content,
-        source: planet?.structure.source,
-        image: planet?.images.internal,
-      });
-    } else if (info === "geology") {
-      return (planetInfos = {
-        content: planet?.geology.content,
-        source: planet?.geology.source,
-        image: planet?.images.geology,
-      });
-    }
-  })();
+  const planetInfos = getPlanetInfo(planet, info);
 
   return (
     <>
       <div className="planet-container">
-        <img src={planetInfos.image} alt="planet" />
+        <img src={planetInfos?.image} alt="planet" />
         <div className="planet-info">
           <p className="planet-name">{planetName?.toUpperCase() || ""}</p>
           <p className="planet-description">{planetInfos?.content}</p>
@@ -46,7 +26,7 @@ export default function PlanetDetails() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href={planetInfos.source}
+              href={planetInfos?.source}
             >
               Wikipedia
             </a>
