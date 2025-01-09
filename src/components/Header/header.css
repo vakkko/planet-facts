@@ -7,6 +7,15 @@
   padding-top: 1.3rem;
 }
 
+.planet-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0.1rem;
+  color: white;
+  padding-top: 2rem;
+}
+
 .planets-navigation {
   display: flex;
   align-items: center;
