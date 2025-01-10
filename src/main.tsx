@@ -1,5 +1,4 @@
 import "./index.css";
-import Header from "./components/Header/Header";
 import PlanetDetails from "./components/PlanetDetails/PlanetDetails";
 import { createRoot } from "react-dom/client";
 import {
@@ -9,12 +8,13 @@ import {
   Route,
   RouterProvider,
 } from "react-router";
+import App from "./App";
 
 const root = createRoot(document.getElementById("root")!);
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Header />}>
+    <Route path="/" element={<App />}>
       <Route index element={<Navigate to="/mercury/overview" replace />} />
       <Route
         path="/:planetName/:info"

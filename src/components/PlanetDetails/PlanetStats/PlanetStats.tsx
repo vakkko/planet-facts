@@ -1,5 +1,5 @@
 import "./planetStats.css";
-import type { PlanetStatsProps } from "~/App.modal";
+import { PlanetStatsProps } from "../../../App.modal";
 
 export default function PlanetStats({
   radius,

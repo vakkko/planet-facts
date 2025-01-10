@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useParams } from "react-router";
+import { NavLink, useParams } from "react-router";
 import "./header.css";
 
 export default function Header() {
@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <>
       <header>
-        <p className="logo">THE PLANETS</p>
+        <span className="logo">THE PLANETS</span>
         <nav className="planets-navigation">
           <NavLink
             to={"/mercury/overview"}
@@ -61,7 +61,6 @@ export default function Header() {
           </NavLink>
         </nav>
       </header>
-      <Outlet />
     </>
   );
 }

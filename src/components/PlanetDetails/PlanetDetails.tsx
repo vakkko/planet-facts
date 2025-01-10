@@ -19,7 +19,7 @@ export default function PlanetDetails() {
       <div className="planet-container">
         <img src={planetInfos?.image} alt="planet" />
         <div className="planet-info">
-          <p className="planet-name">{planetName?.toUpperCase() || ""}</p>
+          <h1 className="planet-name">{planetName?.toUpperCase() || ""}</h1>
           <p className="planet-description">{planetInfos?.content}</p>
           <div className="source-container">
             <span>Source : </span>

@@ -24,8 +24,8 @@ export interface PlanetData {
 }
 
 export interface PlanetStatsProps {
-  radius: string;
-  rotation: string;
-  revolution: string;
-  temperature: string;
+  radius: string | undefined;
+  rotation: string | undefined;
+  revolution: string | undefined;
+  temperature: string | undefined;
 }
