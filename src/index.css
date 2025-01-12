@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
-/* font-family: "Antonio", serif; */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,6 @@ html {
 }
 
 body {
-  font-family: "League Spartan", serif;
   background-image: url("/assets/background-stars.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,4 +30,17 @@ a {
   text-decoration: none;
   color: white;
   cursor: pointer;
+}
+
+.link,
+.link-mercury,
+.planet-description,
+.stat-name {
+  font-family: "League Spartan", serif;
+}
+
+.logo,
+.planet-name,
+.stat {
+  font-family: "Antonio", serif;
 }

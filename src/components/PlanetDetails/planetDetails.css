@@ -6,8 +6,13 @@
   width: 60%;
 }
 
-.planet-container > img {
+.info-images {
+  position: relative;
+}
+
+.planet-pic {
   width: 30rem;
+  position: relative;
 }
 
 .planet-info {
@@ -17,8 +22,14 @@
   gap: 2.3rem;
 }
 
+.planet-geology {
+  width: 16.3rem;
+  position: absolute;
+  bottom: -43%;
+  right: 22.5%;
+}
+
 .planet-name {
-  font-family: "Antonio", serif;
   font-size: 8rem;
   line-height: 10.352rem;
 }

@@ -17,7 +17,24 @@ export default function PlanetDetails() {
   return (
     <>
       <div className="planet-container">
-        <img src={planetInfos?.image} alt="planet" />
+        <div className="info-images">
+          {info !== "geology" ? (
+            <img className="planet-pic" src={planetInfos?.image} alt="planet" />
+          ) : (
+            <>
+              <img
+                className="planet-pic"
+                src={planet?.images.planet}
+                alt="geology"
+              />
+              <img
+                className="planet-geology"
+                src={planetInfos?.image}
+                alt="planet"
+              />
+            </>
+          )}
+        </div>
         <div className="planet-info">
           <h1 className="planet-name">{planetName?.toUpperCase() || ""}</h1>
           <p className="planet-description">{planetInfos?.content}</p>
@@ -28,9 +45,8 @@ export default function PlanetDetails() {
               rel="noopener noreferrer"
               href={planetInfos?.source}
             >
-              Wikipedia
+              Wikipedia <img src="/assets/icon-source.svg" alt="source" />
             </a>
-            <img src="/assets/icon-source.svg" alt="source" />
           </div>
           <div className="info-list">
             <NavLink
