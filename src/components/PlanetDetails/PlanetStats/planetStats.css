@@ -24,3 +24,15 @@
   line-height: 5.176rem;
   letter-spacing: -1.5px;
 }
+
+@media screen and (max-width: 83.4375rem) {
+  .planet-stats > div {
+    padding-right: 6.3rem;
+  }
+}
+
+@media screen and (max-width: 70.125rem) {
+  .planet-stats {
+    width: 90%;
+  }
+}

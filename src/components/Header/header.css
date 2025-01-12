@@ -76,3 +76,15 @@ header {
   box-shadow: 0 -4px 0 0 #2d68f0;
   color: white;
 }
+
+@media screen and (max-width: 70.125rem) {
+  header {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .planets-navigation {
+    align-self: stretch;
+    justify-content: space-evenly;
+  }
+}

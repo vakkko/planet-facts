@@ -65,6 +65,7 @@
   display: flex;
   align-items: center;
   gap: 0.7rem;
+  margin-top: 2.4rem;
 }
 
 .source-container > span {
@@ -121,4 +122,23 @@
 
 .info.neptune.active {
   background-color: #2d68f0;
+}
+
+@media screen and (max-width: 70.125rem) {
+  .planet-container {
+    width: auto;
+    margin-top: 17rem;
+    flex-direction: column;
+    gap: 13rem;
+  }
+
+  .planet-info {
+    flex-direction: row;
+    margin: 0 4rem;
+    gap: 12.3rem;
+  }
+
+  .info-list {
+    width: 100%;
+  }
 }

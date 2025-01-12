@@ -36,17 +36,19 @@ export default function PlanetDetails() {
           )}
         </div>
         <div className="planet-info">
-          <h1 className="planet-name">{planetName?.toUpperCase() || ""}</h1>
-          <p className="planet-description">{planetInfos?.content}</p>
-          <div className="source-container">
-            <span>Source : </span>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={planetInfos?.source}
-            >
-              Wikipedia <img src="/assets/icon-source.svg" alt="source" />
-            </a>
+          <div>
+            <h1 className="planet-name">{planetName?.toUpperCase() || ""}</h1>
+            <p className="planet-description">{planetInfos?.content}</p>
+            <div className="source-container">
+              <span>Source : </span>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={planetInfos?.source}
+              >
+                Wikipedia <img src="/assets/icon-source.svg" alt="source" />
+              </a>
+            </div>
           </div>
           <div className="info-list">
             <NavLink
