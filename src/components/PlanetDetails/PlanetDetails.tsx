@@ -1,8 +1,9 @@
 import "./planetDetails.css";
 import PlanetStats from "./PlanetStats/PlanetStats";
 import { PlanetData } from "../../App.modal";
-import { useLoaderData, useParams, NavLink } from "react-router";
+import { useLoaderData, useParams } from "react-router";
 import { getPlanetInfo } from "../../utils";
+import PlanetInfo from "./PlanetInfo/PlanetInfo";
 
 export default function PlanetDetails() {
   const planetData = useLoaderData() as PlanetData[];
@@ -17,6 +18,7 @@ export default function PlanetDetails() {
   return (
     <>
       <div className="planet-container">
+        <PlanetInfo className={"info-list-mobile"} planetName={planetName} />
         <div className="info-images">
           {info !== "geology" ? (
             <img className="planet-pic" src={planetInfos?.image} alt="planet" />
@@ -50,34 +52,7 @@ export default function PlanetDetails() {
               </a>
             </div>
           </div>
-          <div className="info-list">
-            <NavLink
-              className={`info ${planetName}`}
-              to={`/${planetName}/overview`}
-            >
-              <button>
-                <span className="list-number">01</span> <span>OVERVIEW</span>
-              </button>
-            </NavLink>
-            <NavLink
-              className={`info ${planetName}`}
-              to={`/${planetName}/internal`}
-            >
-              <button>
-                <span className="list-number">02</span>
-                <span>INTERNAL STRUCTURE</span>
-              </button>
-            </NavLink>
-            <NavLink
-              className={`info ${planetName}`}
-              to={`/${planetName}/geology`}
-            >
-              <button>
-                <span className="list-number">03</span>
-                <span>SURFACE GEOLOGY</span>
-              </button>
-            </NavLink>
-          </div>
+          <PlanetInfo className={"info-list"} planetName={planetName} />
         </div>
       </div>
       <PlanetStats

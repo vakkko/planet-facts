@@ -1,10 +1,18 @@
-import { NavLink, useParams } from "react-router";
+import { Link, NavLink, useParams } from "react-router";
 import "./header.css";
+import PlanetsList from "./PlanetsList/PlanetsList";
+import { PlanetsListProps } from "../../App.modal";
 
-export default function Header() {
+export default function Header({
+  hidePlanetsList,
+  setHidePlanetsList,
+}: PlanetsListProps) {
   const params = useParams<{ planetName: string }>();
   const planetName = params.planetName?.toLowerCase();
 
+  const handleButtonClick = () => {
+    setHidePlanetsList(!hidePlanetsList);
+  };
   return (
     <>
       <header>
@@ -60,7 +68,17 @@ export default function Header() {
             NEPTUNE
           </NavLink>
         </nav>
+        <Link to={"/"}>
+          <button onClick={handleButtonClick} className="btn-hamburger">
+            <img src="/assets/icon-hamburger.svg" alt="hamburger-icon" />
+          </button>
+        </Link>
       </header>
+
+      <PlanetsList
+        hidePlanetsList={hidePlanetsList}
+        setHidePlanetsList={setHidePlanetsList}
+      />
     </>
   );
 }

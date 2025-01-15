@@ -21,7 +21,6 @@ body {
 
 button {
   border: none;
-  font-family: "League Spartan", serif;
   color: white;
   background-color: transparent;
 }
@@ -35,7 +34,11 @@ a {
 .link,
 .link-mercury,
 .planet-description,
-.stat-name {
+.stat-name,
+.source-container > a,
+.source-container > span,
+.planets-list > a,
+.info-list-mobile > a > button {
   font-family: "League Spartan", serif;
 }
 

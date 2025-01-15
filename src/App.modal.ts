@@ -1,3 +1,5 @@
+import React, { SetStateAction } from "react";
+
 export interface PlanetData {
   name: string;
   overview: {
@@ -28,4 +30,14 @@ export interface PlanetStatsProps {
   rotation: string | undefined;
   revolution: string | undefined;
   temperature: string | undefined;
+}
+
+export interface PlanetsListProps {
+  hidePlanetsList: boolean;
+  setHidePlanetsList: React.Dispatch<SetStateAction<boolean>>;
+}
+
+export interface PlanetInfoProps {
+  planetName: string | undefined;
+  className: string;
 }

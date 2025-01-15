@@ -1,0 +1,148 @@
+.list-number {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0.25714285373687744rem;
+  color: rgb(131, 131, 145);
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.info-list > a > button {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.1rem 0 1.1rem 2.8rem;
+  cursor: pointer;
+  font-family: "League Spartan", serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  border: 1px solid #838391;
+  width: 100%;
+}
+
+.info-list-mobile > a > button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.008rem;
+  color: #838391;
+}
+
+.info-list-mobile {
+  display: none;
+}
+
+/* ACTIVE */
+
+.info:hover {
+  background-color: #38384f;
+  cursor: pointer;
+}
+
+.info.active > button {
+  border: none;
+}
+
+.info.mercury.active > button {
+  background-color: #419ebb;
+}
+
+.info.venus.active > button {
+  background-color: #eda249;
+}
+
+.info.earth.active > button {
+  background-color: #6d2ed5;
+}
+
+.info.mars.active > button {
+  background-color: #d14c32;
+}
+
+.info.jupiter.active > button {
+  background-color: #d83a34;
+}
+
+.info.saturn.active > button {
+  background-color: #cd5120;
+}
+
+.info.uranus.active > button {
+  background-color: #1ec1a2;
+}
+
+.info.neptune.active > button {
+  background-color: #2d68f0;
+}
+
+@media screen and (max-width: 58.4375rem) {
+  .info-list > a > button {
+    padding-left: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 46.25rem) {
+  .info-list {
+    display: none;
+  }
+
+  .info-list-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    width: 100%;
+    border-bottom: 1px solid #838391;
+  }
+
+  .info-list-mobile > a > button {
+    background-color: transparent !important;
+  }
+
+  .info {
+    padding-bottom: 1.9rem;
+    cursor: pointer;
+  }
+
+  .info.active > button {
+    color: white;
+  }
+
+  .info.mercury.active {
+    border-bottom: 4px solid #419ebb;
+  }
+
+  .info.venus.active {
+    border-bottom: 4px solid #eda249;
+  }
+
+  .info.earth.active {
+    border-bottom: 4px solid #6d2ed5;
+  }
+
+  .info.mars.active {
+    border-bottom: 4px solid #d14c32;
+  }
+
+  .info.jupiter.active {
+    border-bottom: 4px solid #d83a34;
+  }
+
+  .info.saturn.active {
+    border-bottom: 4px solid #cd5120;
+  }
+
+  .info.uranus.active {
+    border-bottom: 4px solid #1ec1a2;
+  }
+
+  .info.neptune.active {
+    border-bottom: 4px solid #2d68f0;
+  }
+}

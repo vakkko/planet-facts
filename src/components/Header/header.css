@@ -31,6 +31,11 @@ header {
   border-bottom: 1px solid #838391;
 }
 
+.btn-hamburger,
+header > a {
+  display: none;
+}
+
 /* ACTIVE */
 
 .link:hover {
@@ -86,5 +91,23 @@ header {
   .planets-navigation {
     align-self: stretch;
     justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 46.25rem) {
+  .planets-navigation {
+    display: none;
+  }
+
+  .btn-hamburger {
+    display: block;
+  }
+
+  header > a {
+    align-self: flex-end;
+  }
+
+  header {
+    flex-direction: row;
   }
 }

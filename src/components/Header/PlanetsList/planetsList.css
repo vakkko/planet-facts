@@ -1,0 +1,32 @@
+@media screen and (max-width: 46.25rem) {
+  .list-img {
+    width: 2rem;
+  }
+
+  .planets-list {
+    display: flex;
+    flex-direction: column;
+    margin: 4.4rem 3.2rem 0 2.4rem;
+  }
+
+  .planets-list > a {
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #838391;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .planets-list > a > div {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .planets-list > a > img {
+    width: 1rem;
+  }
+}

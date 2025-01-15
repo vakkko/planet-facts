@@ -15,7 +15,9 @@ const root = createRoot(document.getElementById("root")!);
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index element={<Navigate to="/mercury/overview" replace />} />
+      {window.innerWidth > 740 && (
+        <Route index element={<Navigate to="/mercury/overview" replace />} />
+      )}
       <Route
         path="/:planetName/:info"
         element={<PlanetDetails />}
