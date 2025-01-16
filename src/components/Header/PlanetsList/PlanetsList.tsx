@@ -1,11 +1,13 @@
 import { NavLink } from "react-router";
 import "./planetsList.css";
-import { PlanetsListProps } from "../../../App.modal";
+import { useContext } from "react";
+import PlanetContext from "../../../PlanetContext";
 
-export default function PlanetsList({
-  hidePlanetsList,
-  setHidePlanetsList,
-}: PlanetsListProps) {
+export default function PlanetsList() {
+  const hidePlanetContext = useContext(PlanetContext);
+  const hidePlanetsList = hidePlanetContext.hidePlanetsList;
+  const setHidePlanetsList = hidePlanetContext.setHidePlanetsList;
+
   const handleListClick = () => {
     setHidePlanetsList(!hidePlanetsList);
   };

@@ -32,12 +32,12 @@ export interface PlanetStatsProps {
   temperature: string | undefined;
 }
 
-export interface PlanetsListProps {
-  hidePlanetsList: boolean;
-  setHidePlanetsList: React.Dispatch<SetStateAction<boolean>>;
-}
-
 export interface PlanetInfoProps {
   planetName: string | undefined;
   className: string;
 }
+
+export type PlanetContextType = {
+  hidePlanetsList: boolean;
+  setHidePlanetsList: React.Dispatch<SetStateAction<boolean>>;
+};

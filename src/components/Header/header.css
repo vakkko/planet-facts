@@ -99,7 +99,8 @@ header > a {
     display: none;
   }
 
-  .btn-hamburger {
+  .btn-hamburger,
+  header > a {
     display: block;
   }
 
