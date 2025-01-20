@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import Header from "./components/Header/Header";
 import { useState } from "react";
-import PlanetContext from "./PlanetContext";
+import PlanetContext from "./context/planetContext";
 
 export default function App() {
   const [hidePlanetsList, setHidePlanetsList] = useState<boolean>(false);

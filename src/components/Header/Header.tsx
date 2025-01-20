@@ -2,12 +2,12 @@ import { Link, NavLink, useParams } from "react-router";
 import "./header.css";
 import PlanetsList from "./PlanetsList/PlanetsList";
 import { useContext } from "react";
-import PlanetContext from "../../PlanetContext";
+import planetContext from "../../context/planetContext";
 
 export default function Header() {
   const params = useParams<{ planetName: string }>();
   const planetName = params.planetName?.toLowerCase();
-  const hidePlanetContext = useContext(PlanetContext);
+  const hidePlanetContext = useContext(planetContext);
   const hidePlanetsList = hidePlanetContext.hidePlanetsList;
   const setHidePlanetsList = hidePlanetContext.setHidePlanetsList;
 

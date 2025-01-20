@@ -1,10 +1,10 @@
 import { NavLink } from "react-router";
 import "./planetsList.css";
 import { useContext } from "react";
-import PlanetContext from "../../../PlanetContext";
+import planetContext from "../../../context/planetContext";
 
 export default function PlanetsList() {
-  const hidePlanetContext = useContext(PlanetContext);
+  const hidePlanetContext = useContext(planetContext);
   const hidePlanetsList = hidePlanetContext.hidePlanetsList;
   const setHidePlanetsList = hidePlanetContext.setHidePlanetsList;
 

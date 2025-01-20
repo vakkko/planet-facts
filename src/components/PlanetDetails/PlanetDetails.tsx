@@ -5,7 +5,7 @@ import { useLoaderData, useParams } from "react-router";
 import { getPlanetInfo } from "../../utils";
 import PlanetInfo from "./PlanetInfo/PlanetInfo";
 import { useContext } from "react";
-import PlanetContext from "../../PlanetContext";
+import planetContext from "../../context/planetContext";
 
 export default function PlanetDetails() {
   const planetData = useLoaderData() as PlanetData[];
@@ -16,7 +16,7 @@ export default function PlanetDetails() {
   const info = params.info;
   const planetName = planet?.name.toLowerCase();
   const planetInfos = getPlanetInfo(planet, info);
-  const hidePlanetsList = useContext(PlanetContext);
+  const hidePlanetsList = useContext(planetContext);
 
   return (
     <>
